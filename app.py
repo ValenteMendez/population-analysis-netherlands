@@ -257,7 +257,7 @@ st.header('Data Trends by Continent')
 plot_continent_data(data_type)
 
 # Nationality selection
-nationalities = st.multiselect('Select Nationalities:', data['Nationality'].unique(), default=['Argentina', 'Brazil'])
+nationalities = st.multiselect('Select Nationalities:', data['Nationality'].unique(), default=['Brazil', 'Mexico', 'Japan', 'Zweden'])
 
 # Plot data trends by selected nationalities
 st.header('Data Trends by Selected Nationalities')
@@ -307,7 +307,7 @@ plot_continent_and_country_data(data_type, continent)
 
 # Treemap for a selected year and data type
 st.header('Treemap of Migration Movements')
-year = st.selectbox('Select Year:', [str(year) for year in range(2010, 2023)], key='year')
+year = st.selectbox('Select Year:', [str(year) for year in range(1995, 2023)], key='year')
 data_type_treemap = st.selectbox('Select Data Type for Treemap:', ['Immigration', 'Emigration', 'Balance'], key='data_type_3')
 plot_treemap(year, data_type_treemap)
 
@@ -353,7 +353,7 @@ year1_countries = st.selectbox('Select Year 1:', [str(year) for year in range(20
 year2_countries = st.selectbox('Select Year 2:', [str(year) for year in range(2010, 2023)], key='year2_countries')
 
 # Streamlit widget for countries selection
-countries = st.multiselect('Select Countries:', data['Nationality'].unique(), default=['Mexico', 'Poland'])
+countries = st.multiselect('Select Countries:', data['Nationality'].unique(), default=['Mexico', 'Poland', 'Chili', 'Peru'])
 
 # Streamlit widget for data type selection
 data_type_countries = st.selectbox('Select Data Type:', ['Immigration', 'Emigration', 'Balance'], key='data_type_countries')
