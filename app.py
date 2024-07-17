@@ -367,3 +367,5 @@ st.header('Animated Bubble Chart of Migration Movements')
 data_type_bubble = st.selectbox('Select Data Type for Bubble Chart:', ['Immigration', 'Emigration', 'Balance'], key='data_type_bubble')
 
 plot_bubble_chart(data_type_bubble)
+
+st.markdown('Made by [Valentin Mendez](https://www.linkedin.com/in/valentemendez/)')
