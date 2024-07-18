@@ -3,6 +3,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
+st.set_page_config(page_title="Migration Analysis Netherlands",
+                   page_icon=":bar_chart:")
+
 # Load the dataset
 file_path = 'merged_immigration_data - Clean DB immigration.csv'
 data = pd.read_csv(file_path)
@@ -244,6 +247,7 @@ def calculate_total_population(data, continent, country, start_year, end_year, i
 
 # Streamlit app
 st.title('Migratory Movements Analysis')
+st.markdown('*Note: Figures exclude Migration background = Dutch background*') 
 
 # Data type selection
 data_type = st.selectbox('Select Data Type:', ['Immigration', 'Emigration', 'Balance'], key='data_type_1')
@@ -315,6 +319,7 @@ plot_treemap(year, data_type_treemap)
 
 # Streamlit app for total population calculation
 st.title('Total Population Calculation')
+st.markdown('*Note: Suggested start year to calculate terminal population is 1996.*') 
 
 # Interactive widgets for total population calculation
 continent_pop = st.selectbox('Select Continent:', data['Continent'].unique(), key='continent_dropdown')
@@ -370,4 +375,14 @@ data_type_bubble = st.selectbox('Select Data Type for Bubble Chart:', ['Immigrat
 
 plot_bubble_chart(data_type_bubble)
 
-st.markdown('Made by [Valentin Mendez](https://www.linkedin.com/in/valentemendez/)')
+st.markdown('Made by [Valentin Mendez](https://www.linkedin.com/in/valentemendez/) using information from [Overheid.nl](https://data.overheid.nl/dataset/268-immi--en-emigratie--per-maand--migratieachtergrond--geslacht#panel-resources)')
+
+hide_st_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+    """
+
+st.markdown(hide_st_style, unsafe_allow_html=True)
