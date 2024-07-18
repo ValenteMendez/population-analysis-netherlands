@@ -381,7 +381,7 @@ hide_st_style = """
     <style>
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-   
+    header {visibility: hidden;}
     </style>
     """
 
