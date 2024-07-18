@@ -319,7 +319,7 @@ plot_treemap(year, data_type_treemap)
 
 # Streamlit app for total population calculation
 st.title('Total Population Calculation')
-st.markdown('*Note: Suggested start year to calculate terminal population is 1996.*') 
+st.markdown('*Note: Suggested start year to calculate terminal population is 1996. Approximation, likely unreliable.*') 
 
 # Interactive widgets for total population calculation
 continent_pop = st.selectbox('Select Continent:', data['Continent'].unique(), key='continent_dropdown')
