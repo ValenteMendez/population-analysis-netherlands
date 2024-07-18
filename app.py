@@ -256,11 +256,13 @@ plot_total_data(data_type)
 st.header('Data Trends by Continent')
 plot_continent_data(data_type)
 
+# Plot data trends by selected nationalities
+st.header('Data Trends by Selected Nationalities')
+
 # Nationality selection
 nationalities = st.multiselect('Select Nationalities:', data['Nationality'].unique(), default=['Brazil', 'Mexico', 'Japan', 'Zweden'])
 
-# Plot data trends by selected nationalities
-st.header('Data Trends by Selected Nationalities')
+
 plot_nationality_data(data_type, nationalities)
 
 # Function to get data by continent
