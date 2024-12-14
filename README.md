@@ -6,3 +6,5 @@ This app uses data from the Overheid.nl to show you the population trends in the
 
 Make sure to deselect the 'Dutch' nationality so you can see the population trends for the non-Dutch population.
 
+Go to the app: https://population-analysis-netherlands.streamlit.app/
+
